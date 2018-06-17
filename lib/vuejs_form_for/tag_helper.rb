@@ -1,4 +1,4 @@
-require "vue_options_resolver"
+require "./vue_options_resolver"
 
 module VuejsFormFor
   module TagHelper
