@@ -6,11 +6,11 @@ require 'vuejs_form_for/version'
 Gem::Specification.new do |spec|
   spec.name          = "vuejs_form_for"
   spec.version       = VuejsFormFor::VERSION
-  spec.authors       = ["Hxmusic"]
+  spec.authors       = ["nbtcnet"]
   spec.email         = ["hxmusic@foxmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{a vue for form_for}
+  spec.description   = %q{ just use vuejs_form_for instead of form_for}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
@@ -23,9 +23,16 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
-    f.match(%r{^(test|spec|features)/})
-  end
+  
+
+ 
+
+  spec.require_paths = ['lib']
+
+  spec.files      = `git ls-files`.split($/)
+  spec.test_files = spec.files.grep(%r{^(test|spec|features)/})
+  spec.files         = Dir["CHANGELOG.md", "MIT-LICENSE", "README.md", "lib/**/*"]
+  
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
@@ -33,4 +40,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.14"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "pry"
+ 
+  
 end
